@@ -23,3 +23,8 @@ Good luck and have fun!
 **Github**
 
 * [Link to project on Github](https://kd7yuen.github.io/se_project_aroundtheus/)
+
+**Future ideas**
+
+* Add more cards
+* Put own images
