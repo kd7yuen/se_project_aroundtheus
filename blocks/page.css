@@ -10,6 +10,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .page__content {
@@ -17,24 +18,12 @@
   max-width: 882px;
   box-sizing: border-box;
   font-family: "Inter", Arial, sans-serif;
+  padding: 0;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1250px) {
-  .page {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
-    background-color: #000000;
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-  }
-
   .page__content {
+    max-width: 810px;
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
@@ -43,26 +32,12 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  .page {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
-    background-color: #000000;
-    max-width: 320px;
-    width: 100%;
-    padding: 0;
-  }
-
   .page__content {
-    font-family: "Inter", Arial, sans-serif;
+    max-width: 320px;
     width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 0;
   }
 }
 

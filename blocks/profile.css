@@ -8,7 +8,6 @@
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .profile {
-    width: 100%;
     margin: 0;
     padding-bottom: 36px;
     display: flex;
@@ -37,7 +36,6 @@
 }
 
 .profile__info {
-  width: 100%;
   margin: 0 auto 0 0;
   padding: 0;
   display: flex;
@@ -54,21 +52,20 @@
   }
 }
 
-.profile__title {
+.profile__name {
   display: flex;
   align-items: center;
   box-sizing: border-box;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  .profile__title {
+  .profile__name {
     margin: 0 auto;
     padding: 0;
   }
 }
 
-.profile__title-name {
-  font-family: "Inter", Arial, sans-serif;
+.profile__title {
   font-size: 42px;
   font-weight: 500;
   line-height: 48px;
@@ -80,24 +77,14 @@
   white-space: nowrap;
 }
 
-.profile__title-name:hover {
-  overflow: visible;
-  white-space: normal;
-}
-
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  .profile__title-name {
+  .profile__title {
     font-size: 22px;
     margin: 0 10px 0 0;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
   }
-
-  .profile__title-name:hover {
-    overflow: visible;
-    white-space: normal;
-}
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
@@ -188,12 +175,6 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
-  .profile__add {
-    max-width: 150px;
-    width: 100%;
-    height: 50px;
-  }
-
   .profile__add:hover {
   opacity: 60%;
   }
