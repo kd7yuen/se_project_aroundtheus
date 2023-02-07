@@ -23,11 +23,10 @@
 
 @media screen and (min-width: 768px) and (max-width: 1250px) {
   .page__content {
-    max-width: 810px;
+    max-width: 770px;
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0 20px;
   }
 }
 
