@@ -37,10 +37,8 @@
   }
 
   .page__content {
-    max-width: 282px;
     display: flex;
     flex-direction: column;
- 
   }
 }
 
