@@ -1,12 +1,14 @@
 .header {
-  padding: 45px 0 41px 0;
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+}
+
+.header__title {
+  padding: 45px 0 41px 0;
 }
 
 @media screen and (min-width: 310px) and (max-width: 768px) {
   .header {
     width: 100%;
-    padding: 0;
   }
 
   .header__title {

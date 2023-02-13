@@ -7,10 +7,15 @@
   list-style-type: none;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1250px) {
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 .cards__block {
-  margin: 0;
-  padding: 0;
-  border-radius: 10px 10px 10px 10px;
   max-width: 282px;
 }
 
@@ -23,8 +28,6 @@
 
 .cards__description {
   display: flex;
-  max-width: 282px;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
@@ -35,15 +38,12 @@
   font-size: 24px;
   font-weight: 900;
   line-height: 29px;
-  letter-spacing: 0em;
-  text-align: left;
   color: #000000;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   max-width: 75%;
   margin: 25px 0 25px 20px;
-  padding: 0;
 }
 
 .cards__button {
@@ -58,12 +58,4 @@
 
 .cards__button:hover {
   opacity: 50%;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1250px) {
-  .cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
 }
