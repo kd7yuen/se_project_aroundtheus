@@ -1,7 +1,7 @@
 let initialCards = [
   {
     name: "amsterdam",
-    link: url("https://unsplash.com/photos/-e4vLFZV9QM"),
+    link: url("https://unsplash.com/photos/2K2SR19RLg8"),
   },
   {
     name: "heathrowAirport",
