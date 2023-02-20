@@ -21,6 +21,6 @@ let initialCards = [
   },
   {
     name: "applePark",
-    link: "https://uns plash.com/photos/0HfJkC-Udhg",
+    link: "https://unsplash.com/photos/0HfJkC-Udhg",
   },
 ];
