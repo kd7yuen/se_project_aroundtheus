@@ -77,8 +77,8 @@
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  bottom: 560px;
-  left: 999px;
+  bottom: 540px;
+  left: 980px;
   height: 50px;
   width: 40px;
   border: none;
@@ -109,5 +109,9 @@
     width: 238px;
     height: 46px;
     margin: 45px 0 25px 0;
+  }
+  .modal__close {
+    bottom: 510px;
+    left: 460px;
   }
 }

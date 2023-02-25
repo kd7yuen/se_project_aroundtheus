@@ -24,7 +24,7 @@
             <div class="profile__info">
               <div class="profile__name">
                 <h1 class="profile__title">Jacques Cousteau</h1>
-                <button onclick="document.getElementById('modal__container').style.display='flex'" type="button" aria-label="Edit button to change name or description" class="profile__edit profile__button"></button>
+                <button id="profile-open" type="button" aria-label="Edit button to change name or description" class="profile__edit profile__button"></button>
               </div>
               <p class="profile__description">Explorer</p>
             </div>
@@ -93,7 +93,7 @@
           </fieldset>
         </form>
       </div>
-      <button type="button" class="modal__close"></button>
+      <button type="button" id="profile-close" class="modal__close" aria-label="This closes the pop-up form"></button>
     </div>
     <script src="./scripts/index.js"></script>
   </body>

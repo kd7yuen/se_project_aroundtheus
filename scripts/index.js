@@ -24,3 +24,16 @@ const initialCards = [
     link: "https://code.s3.yandex.net/web-code/lago.jpg",
   },
 ];
+
+var profileModalOpen = document.getElementById("profile-open");
+var profileModalClose = document.getElementById("profile-close");
+
+profileModalOpen.addEventListener("click", openFunction);
+function openFunction() {
+  document.getElementById("modal__container").style.display = "flex";
+}
+
+profileModalClose.addEventListener("click", closeFunction);
+function closeFunction() {
+  document.getElementById("modal__container").style.display = "none";
+}
