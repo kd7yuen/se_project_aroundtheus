@@ -1,3 +1,4 @@
+// data array
 const initialCards = [
   {
     name: "Amsterdam",
@@ -24,27 +25,30 @@ const initialCards = [
     link: "https://images.unsplash.com/photo-1591292784843-aa35ebb7897b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
   },
 ];
-function GetCardElement(data) {
-  const template = document.querySelector("#cardsList");
+
+//grab card elements to be repeated throughout array
+function getCardElement(data) {
+  const template = document.querySelector("#cardsList").content.querySelector(".cards__block");
+  const cardElement = template.cloneNode(true);
   const lists = document.querySelector(".cards");
-  const cardImage = template.querySelector(".cards__image");
-  const cardTitle = template.querySelector(".cards__title");
+  const cardImage = cardElement.querySelector(".cards__image");
+  const cardTitle = cardElement.querySelector(".cards__title");
 
-  initialCards.forEach((data) => {
-    let cardElement = template.content.cloneNode(true);
-    cardImage.src = data.link;
-    cardTitle.textContent = data.name;
-    cardImage.alt = data.name;
-    lists.append(cardElement);
-  });
+  cardImage.src = data.link;
+  cardTitle.textContent = data.name;
+  cardImage.alt = data.name;
+  lists.append(cardElement);
 }
-GetCardElement();
 
-//container
+initialCards.forEach((card) => {
+  getCardElement(card);
+});
+
+//container for modal and modal's form
 const modal = document.querySelector(".modal");
 const profileEditForm = document.querySelector(".modal__form");
 
-//Buttons
+//Buttons and form fill out
 const profileEditButton = document.querySelector(".profile__edit");
 const modalCloseButton = document.querySelector(".modal__close");
 const profileTitle = document.querySelector(".profile__title");
@@ -54,16 +58,19 @@ const profileDescription = document.querySelector(".profile__description");
 const nameInput = profileEditForm.querySelector(".modal__name");
 const jobInput = profileEditForm.querySelector(".modal__description");
 
+//removes class
 function closeModal() {
   modal.classList.remove("modal__content-open");
 }
 
+//adds class
 function openModal() {
   nameInput.value = profileTitle.textContent;
   jobInput.value = profileDescription.textContent;
   modal.classList.add("modal__content-open");
 }
 
+//records for when edit button is clicked
 profileEditButton.addEventListener("click", openModal);
 modalCloseButton.addEventListener("click", closeModal);
 
