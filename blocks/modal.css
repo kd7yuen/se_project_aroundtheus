@@ -1,17 +1,18 @@
-.modal-open {
-  font-family: "Inter", Arial, sans-serif;
-}
-
-#modal__container {
+.modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
   margin: 0 auto;
+  font-family: "Inter", Arial, sans-serif;
+  background-color: rgba(0,0,0,0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal__content-open {
+  display: flex;
 }
 
 .modal__content{
@@ -49,11 +50,14 @@
   text-align: left;
 }
 
+.modal__name {
+  font-size: 14px;
+}
+
 .modal__input {
   width: 100%;
   padding: 0 0 13.26px 0;
   border: none;
-  font-size: 14px;
   line-height: 16.94px;
   margin: 0;
   border-bottom: 1px solid black;
@@ -61,6 +65,7 @@
 
 .modal__description {
   margin-top: 29.74px;
+  font-size: 14px;
 }
 
 .modal__save {
@@ -78,7 +83,7 @@
   background-repeat: no-repeat;
   position: absolute;
   bottom: 540px;
-  left: 980px;
+  left: 975px;
   height: 50px;
   width: 40px;
   border: none;

@@ -32,7 +32,17 @@
           </div>
         </section>
         <section class="card">
-          <ul class="cards">
+          <ul class="cards"></ul>
+          <template id="cardsList">
+            <li class="cards__block">
+              <img class="cards__image" src="" alt="" />
+              <div class="cards__description">
+                <h2 class="cards__title"></h2>
+                <button type="button" class="cards__button"></button>
+              </div>
+            </li>
+          </template>
+          <!-- <ul class="cards">
             <li class="cards__block">
               <img class="cards__image" src="./images/yosemite.jpg" alt="Pine trees flanking both sides of the river with a mountain ridge in the distant." />
               <div class="cards__description">
@@ -75,16 +85,16 @@
                 <button type="button" class="cards__button"></button>
               </div>
             </li>
-          </ul>
+          </ul> -->
         </section>
       </main>
       <footer class="footer">
         <p class="footer__copyright">© 2023 Around The U.S.</p>
       </footer>
     </div>
-    <div class="modal modal-open" id="modal__container">
-      <div class="modal__content">
-        <form class="modal__form form">
+    <div class="modal">
+      <div class="modal__content modal__content-open">
+        <form class="modal__form">
           <h2 class="modal__title">Edit Profile</h2>
           <fieldset class="modal__fieldset">
             <input class="modal__name modal__input" type="text" placeholder="Name" />
