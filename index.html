@@ -24,11 +24,11 @@
             <div class="profile__info">
               <div class="profile__name">
                 <h1 class="profile__title">Jacques Cousteau</h1>
-                <button id="profile-open" type="button" aria-label="Edit button to change name or description" class="profile__edit profile__button"></button>
+                <button id="profile-open" type="button" aria-label="Edit button to change name or description" class="profile__edit profile__edit-button"></button>
               </div>
               <p class="profile__description">Explorer</p>
             </div>
-            <button type="button" aria-label="Add button to allow more pictures to the collection" class="profile__add profile__button"></button>
+            <button type="button" aria-label="Add button to allow more pictures to the collection" class="profile__add profile__add-button"></button>
           </div>
         </section>
         <section class="card">
@@ -42,50 +42,6 @@
               </div>
             </li>
           </template>
-          <!-- <ul class="cards">
-            <li class="cards__block">
-              <img class="cards__image" src="./images/yosemite.jpg" alt="Pine trees flanking both sides of the river with a mountain ridge in the distant." />
-              <div class="cards__description">
-                <h2 class="cards__title">Yosemite Valley</h2>
-                <button type="button" class="cards__button"></button>
-              </div>
-            </li>
-            <li class="cards__block">
-              <img class="cards__image" src="./images/lake-louise.jpg" alt="body of water with a reflection of two mountains." />
-              <div class="cards__description">
-                <h2 class="cards__title">Lake Louise</h2>
-                <button type="button" class="cards__button"></button>
-              </div>
-            </li>
-            <li class="cards__block">
-              <img class="cards__image" src="./images/bald-mountains.jpg" alt="Sun rising in the distant and revealing mountains." />
-              <div class="cards__description">
-                <h2 class="cards__title">Bald Mountains</h2>
-                <button type="button" class="cards__button"></button>
-              </div>
-            </li>
-            <li class="cards__block">
-              <img class="cards__image" src="./images/latemar.jpg" alt="Night skies showing numerous stars and moonlight illuminating baren snow mountains." />
-              <div class="cards__description">
-                <h2 class="cards__title">Latemar</h2>
-                <button type="button" class="cards__button"></button>
-              </div>
-            </li>
-            <li class="cards__block">
-              <img class="cards__image" src="./images/vanoise.jpg" alt="Early sunrise with a lake reflection of a mountain in the distant." />
-              <div class="cards__description">
-                <h2 class="cards__title">Vanoise National Park</h2>
-                <button type="button" class="cards__button"></button>
-              </div>
-            </li>
-            <li class="cards__block">
-              <img class="cards__image" src="./images/lago.jpg" alt="Two small wooden boats docked and mountain valley in the distant." />
-              <div class="cards__description">
-                <h2 class="cards__title">Lago di Braies</h2>
-                <button type="button" class="cards__button"></button>
-              </div>
-            </li>
-          </ul> -->
         </section>
       </main>
       <footer class="footer">
@@ -93,17 +49,19 @@
       </footer>
     </div>
     <div class="modal">
-      <div class="modal__content modal__content-open">
-        <form class="modal__form">
-          <h2 class="modal__title">Edit Profile</h2>
-          <fieldset class="modal__fieldset">
-            <input class="modal__name modal__input" type="text" placeholder="Name" />
-            <input class="modal__description modal__input" type="text" placeholder="Description" />
-            <button type="button" class="modal__save">Save</button>
-          </fieldset>
-        </form>
+      <div class="modal-open">
+        <div class="modal__container">
+          <form class="modal__form">
+            <h2 class="modal__title">Edit Profile</h2>
+            <fieldset class="modal__fieldset">
+              <input class="modal__input_type_name" type="text" placeholder="Name" />
+              <input class="modal__input_type_description" type="text" placeholder="Description" />
+              <button type="button" class="modal__save">Save</button>
+            </fieldset>
+          </form>
+          <button type="button" id="profile-close" class="modal__close modal__close-button" aria-label="This closes the pop-up form"></button>
+        </div>
       </div>
-      <button type="button" id="profile-close" class="modal__close" aria-label="This closes the pop-up form"></button>
     </div>
     <script src="./scripts/index.js"></script>
   </body>
