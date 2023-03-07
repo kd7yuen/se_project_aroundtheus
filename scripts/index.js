@@ -83,15 +83,3 @@ function handleProfileFormSubmit(evt) {
   closeModal();
 }
 profileEditForm.addEventListener("submit", handleProfileFormSubmit);
-
-
-// Declare a getCardElement() function with one parameter named data. You’ll be passing objects of the array to it. The function should:
-// clone the template element with all its content and store it in a cardElement variable
-// access the card title and image and store them in variables
-// set the path to the image to the link field of the object
-// set the image alt text to the name field of the object
-// set the card title to the name field of the object, too
-// return the ready HTML element with the filled-in data
-// Iterate over the cards array using a loop, and in each iteration:
-// Run your getCardElement() function on the card object to create the HTML element.
-// Use the appropriate built-in DOM method to add this HTML element to the page.
