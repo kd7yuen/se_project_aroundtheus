@@ -44,13 +44,6 @@ initialCards.forEach((card) => {
   }
 });
 
-
-
-
-
-
-
-
 //container for modal and modal's form
 const modal = document.querySelector(".modal");
 const profileEditForm = document.querySelector(".modal__form");
@@ -60,6 +53,7 @@ const profileEditButton = document.querySelector(".profile__edit");
 const modalCloseButton = document.querySelector(".modal__close");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
+const profileSaveButton = document.querySelector(".modal__save");
 
 //form data
 const nameInput = profileEditForm.querySelector(".modal__input_type_name");
@@ -80,6 +74,7 @@ function openModal() {
 //records for when edit button is clicked
 profileEditButton.addEventListener("click", openModal);
 modalCloseButton.addEventListener("click", closeModal);
+profileSaveButton.addEventListener("click", closeModal);
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
