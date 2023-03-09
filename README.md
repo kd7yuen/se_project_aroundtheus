@@ -12,7 +12,7 @@ This project is made so all the elements are displayed correctly on popular scre
 
 Created a webpage with cards that follow a grid pattern and can adjust to different screen types.
 
-This now includes the early works of interactive javascript. The edit button now displays a popup to edit the profile.
+This now includes the early works of interactive javascript. The edit button now displays a popup to edit the profile. Added a sticky footer that always stays at bottom even when more cards added.
   
 **Figma**  
   
