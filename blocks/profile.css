@@ -26,7 +26,6 @@
 .profile__name {
   display: flex;
   align-items: center;
-  max-width: 320px;
 }
 
 .profile__title {
@@ -40,6 +39,7 @@
   overflow: hidden;
   white-space: nowrap;
   margin: 0;
+  max-width: 373px;
 }
 
 
