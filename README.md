@@ -10,6 +10,8 @@
   
 This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
 
+Created a webpage with cards that follow a grid pattern and can adjust to different screen types.
+
 This now includes the early works of interactive javascript. The edit button now displays a popup to edit the profile.
   
 **Figma**  
@@ -22,7 +24,7 @@ The way you'll do this at work is by exporting images directly from Figma — we
   
 Good luck and have fun!
 
-* [Link to project demo]()
+* [Link to project popup edit box](https://github.com/kd7yuen/se_project_aroundtheus/blob/main/images/project_demo/modal_popup.png)
 
 **Github**
 
@@ -30,5 +32,6 @@ Good luck and have fun!
 
 **Future ideas**
 
-* Add more cards
+* Add more different cards
 * Put own images
+* add more css of own style with more pseudo-classes
