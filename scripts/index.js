@@ -26,23 +26,21 @@ const initialCards = [
   },
 ];
 
-    const lists = document.querySelector(".cards");
-    const template = document.querySelector("#cardsList").content.querySelector(".cards__block");
+const lists = document.querySelector(".cards__list");
+const template = document.querySelector("#card").content.querySelector(".card__block");
 
-initialCards.forEach((card) => {
-  getCardElement(card);
+initialCards.forEach(getCardElement);
 
-  //Grab data that can be reused
+//Grab data that can be reused
   function getCardElement(data) {
     const cardElement = template.cloneNode(true);
-    const cardImage = cardElement.querySelector(".cards__image");
-    const cardTitle = cardElement.querySelector(".cards__title");
+    const cardImage = cardElement.querySelector(".card__image");
+    const cardTitle = cardElement.querySelector(".card__title");
     cardImage.src = data.link;
     cardTitle.textContent = data.name;
     cardImage.alt = data.name;
-    lists.append(cardElement);
-  }
-});
+    return lists.append(cardElement);
+  };
 
 //container for modal and modal's form
 const modal = document.querySelector(".modal");
@@ -53,28 +51,26 @@ const profileEditButton = document.querySelector(".profile__edit");
 const modalCloseButton = document.querySelector(".modal__close");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
-const profileSaveButton = document.querySelector(".modal__save");
 
 //form data
 const nameInput = profileEditForm.querySelector(".modal__input_type_name");
 const jobInput = profileEditForm.querySelector(".modal__input_type_description");
 
-//removes class
+//removes modal
 function closeModal() {
-  modal.classList.remove("modal-open");
+  modal.style.display = 'none';
 }
 
 //adds class
 function openModal() {
   nameInput.value = profileTitle.textContent;
   jobInput.value = profileDescription.textContent;
-  modal.classList.add("modal-open");
+  modal.style.display = 'flex';
 }
 
 //records for when edit button is clicked
 profileEditButton.addEventListener("click", openModal);
 modalCloseButton.addEventListener("click", closeModal);
-profileSaveButton.addEventListener("click", closeModal);
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();

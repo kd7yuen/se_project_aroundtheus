@@ -24,21 +24,21 @@
             <div class="profile__info">
               <div class="profile__name">
                 <h1 class="profile__title">Jacques Cousteau</h1>
-                <button type="button" aria-label="Edit button to change name or description" class="profile__edit profile__edit-button"></button>
+                <button type="button" aria-label="Edit button to change name or description" class="profile__edit"></button>
               </div>
               <p class="profile__description">Explorer</p>
             </div>
-            <button type="button" aria-label="Add button to allow more pictures to the collection" class="profile__add profile__add-button"></button>
+            <button type="button" aria-label="Add button to allow more pictures to the collection" class="profile__add"></button>
           </div>
         </section>
-        <section class="card">
-          <ul class="cards"></ul>
-          <template id="cardsList">
-            <li class="cards__block">
-              <img class="cards__image" src="" alt="" />
-              <div class="cards__description">
-                <h2 class="cards__title"></h2>
-                <button type="button" class="cards__button"></button>
+        <section class="cards">
+          <ul class="cards__list"></ul>
+          <template id="card">
+            <li class="card__block">
+              <img class="card__image" src="" alt="" />
+              <div class="card__description">
+                <h2 class="card__title"></h2>
+                <button type="button" class="card__button"></button>
               </div>
             </li>
           </template>
@@ -48,20 +48,18 @@
         <p class="footer__copyright">© 2023 Around The U.S.</p>
       </footer>
     </div>
-    <div class="modal">
-      <div class="modal-open">
+    <div class="modal modal-open">
         <div class="modal__container">
-          <form class="modal__form">
+          <form class="modal__form" name="profile_form">
             <h2 class="modal__title">Edit Profile</h2>
             <fieldset class="modal__fieldset">
-              <input class="modal__input_type_name" type="text" placeholder="Name" />
-              <input class="modal__input_type_description" type="text" placeholder="Description" />
-              <button type="button" aira-label="Saves new labels" class="modal__save">Save</button>
+              <input class="modal__input modal__input_type_name" type="text" placeholder="Name" name="profile_name_input"/>
+              <input class="modal__input modal__input_type_description" type="text" placeholder="Description" name="profile_description_input"/>
+              <button type="submit" aria-label="Saves new input from user" class="modal__save">Save</button>
             </fieldset>
           </form>
-          <button type="button" class="modal__close modal__close-button" aria-label="This closes the pop-up form"></button>
+          <button type="button" class="modal__close" aria-label="This closes the pop-up form"></button>
         </div>
-      </div>
     </div>
     <script src="./scripts/index.js"></script>
   </body>
