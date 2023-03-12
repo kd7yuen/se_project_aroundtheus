@@ -66,13 +66,13 @@ const jobInput = profileEditForm.querySelector(
 
 //removes modal
 function closeModal() {
-  modal.classList.remove("modal-open");
+  modal.classList.remove("modal_open");
 }
 //opens modal
 function openModal() {
   nameInput.value = profileTitle.textContent;
   jobInput.value = profileDescription.textContent;
-  modal.classList.add("modal-open");
+  modal.classList.add("modal_open");
 }
 
 // records for when edit button is clicked

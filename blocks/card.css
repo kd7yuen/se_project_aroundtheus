@@ -37,6 +37,7 @@
   width: 21px;
   height: 18px;
   background-image: url("../images/SVG/Like_button.svg");
+  cursor: pointer;
 }
 
 .card__button:hover {
