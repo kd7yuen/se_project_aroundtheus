@@ -14,7 +14,6 @@
   border-radius: 50%;
 }
 
-
 .profile__info {
   margin: 0 auto 0 30px;
   display: flex;
@@ -22,8 +21,7 @@
   color: #ffffff;
 }
 
-
-.profile__name {
+.profile__labels {
   display: flex;
   align-items: center;
 }
@@ -42,20 +40,6 @@
   max-width: 373px;
 }
 
-
-.profile__description {
-  margin: 0;
-  padding: 16px 0 0 0;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0em;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  max-width: 320px;
-}
-
-
 .profile__edit {
   width: 24px;
   height: 24px;
@@ -68,9 +52,20 @@
   cursor: pointer;
 }
 
-
-.profile__edit-button:hover {
+.profile__edit:hover {
   opacity: 60%;
+}
+
+.profile__description {
+  margin: 0;
+  padding: 16px 0 0 0;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 320px;
 }
 
 .profile__add {
@@ -86,12 +81,12 @@
   cursor: pointer;
 }
 
-.profile__add-button:hover {
+.profile__add:hover {
   opacity: 60%;
 }
 
 @media screen and (max-width: 1024px) {
-    .profile__add {
+  .profile__add {
     width: 110px;
   }
 
@@ -101,7 +96,7 @@
 }
 
 @media screen and (max-width: 768px) {
-      .profile__add {
+  .profile__add {
     width: 80px;
   }
 
@@ -111,20 +106,20 @@
 }
 
 @media screen and (max-width: 582px) {
-    .profile {
+  .profile {
     margin: 0 0 36px 0;
   }
 
-    .profile__container {
+  .profile__container {
     flex-direction: column;
     max-width: 320px;
   }
 
-   .profile__avatar {
+  .profile__avatar {
     margin-top: 38.25px;
   }
 
-    .profile__info {
+  .profile__info {
     align-items: center;
     justify-content: center;
     margin: 30px 0 0 0;
@@ -133,20 +128,18 @@
   .profile__name {
     max-width: 320px;
   }
-    .profile__title {
-    max-width: 320px;
-  }
+
   .profile__title {
     font-size: 22px;
     max-width: 320px;
   }
 
-    .profile__description {
+  .profile__description {
     font-size: 14px;
     line-height: 17px;
     padding: 0;
-  }  
- .profile__edit {
+  }
+  .profile__edit {
     width: 18px;
     height: 18px;
   }

@@ -26,21 +26,27 @@ const initialCards = [
   },
 ];
 
-const lists = document.querySelector(".cards__list");
-const template = document.querySelector("#card").content.querySelector(".card__block");
-
-initialCards.forEach(getCardElement);
+//variables to grab
+const cardsList = document.querySelector(".cards__list");
+const cardTemplate = document
+  .querySelector("#card")
+  .content.querySelector(".card__block");
 
 //Grab data that can be reused
-  function getCardElement(data) {
-    const cardElement = template.cloneNode(true);
-    const cardImage = cardElement.querySelector(".card__image");
-    const cardTitle = cardElement.querySelector(".card__title");
-    cardImage.src = data.link;
-    cardTitle.textContent = data.name;
-    cardImage.alt = data.name;
-    return lists.append(cardElement);
-  };
+function getCardElement(data) {
+  const cardElement = cardTemplate.cloneNode(true);
+  const cardImage = cardElement.querySelector(".card__image");
+  const cardTitle = cardElement.querySelector(".card__title");
+  cardImage.src = data.link;
+  cardTitle.textContent = data.name;
+  cardImage.alt = data.name;
+  return cardElement;
+}
+
+//iterate through card data
+for (cardData of initialCards) {
+  cardsList.append(getCardElement(cardData));
+}
 
 //container for modal and modal's form
 const modal = document.querySelector(".modal");
@@ -54,21 +60,22 @@ const profileDescription = document.querySelector(".profile__description");
 
 //form data
 const nameInput = profileEditForm.querySelector(".modal__input_type_name");
-const jobInput = profileEditForm.querySelector(".modal__input_type_description");
+const jobInput = profileEditForm.querySelector(
+  ".modal__input_type_description"
+);
 
 //removes modal
 function closeModal() {
-  modal.style.display = 'none';
+  modal.classList.remove("modal-open");
 }
-
-//adds class
+//opens modal
 function openModal() {
   nameInput.value = profileTitle.textContent;
   jobInput.value = profileDescription.textContent;
-  modal.style.display = 'flex';
+  modal.classList.add("modal-open");
 }
 
-//records for when edit button is clicked
+// records for when edit button is clicked
 profileEditButton.addEventListener("click", openModal);
 modalCloseButton.addEventListener("click", closeModal);
 

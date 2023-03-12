@@ -10,10 +10,11 @@
   z-index: 3;
   justify-content: center;
   align-items: center;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 .modal-open {
-font-family: "Inter", Arial, sans-serif;
+display: flex;
 }
 
 .modal__container {
@@ -74,6 +75,11 @@ font-family: "Inter", Arial, sans-serif;
   font-size: 18px;
   line-height: 22px;
   cursor: pointer;
+  border-radius: 2px;
+}
+
+.modal__save:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal__close {

@@ -14,18 +14,11 @@
 }
 
 @media screen and (max-width: 768px) {
-    .footer {
-    padding: 48px 0 36px 0;
+  .footer {
     width: 600px;
-    margin: 0 auto;
     box-sizing: border-box;
   }
-
-  .footer__copyright {
-    font-size: 14px;
-  }  
 }
-
 
 /* mobile */
 @media screen and (max-width: 582px) {
@@ -34,8 +27,5 @@
     width: 282px;
     margin: 0 auto;
   }
-
-  .footer__copyright {
-    font-size: 14px;
-  }
 }
+
