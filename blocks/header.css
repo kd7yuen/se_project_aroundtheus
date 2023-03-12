@@ -4,9 +4,11 @@
 
 .header__title {
   padding: 45px 0 41px 0;
+  width: 173px;
+  height: 33px;
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (max-width: 528px) {
   .header {
     max-width: 100%;
     width: 100%;
