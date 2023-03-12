@@ -96,6 +96,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .profile__container {
+    max-width: 600px;
+  }
+
   .profile__add {
     width: 80px;
   }

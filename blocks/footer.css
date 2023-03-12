@@ -13,10 +13,14 @@
   margin: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .footer {
-    width: 600px;
-    box-sizing: border-box;
+    max-width: 600px;
+    margin-left: 18px;
+  }
+
+  .footer_copyright {
+    font-size: 15px;
   }
 }
 
