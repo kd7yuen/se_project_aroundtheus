@@ -137,7 +137,7 @@
 
 /* Modal Image */
 
-.modal__image_container {
+.modal__image {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
