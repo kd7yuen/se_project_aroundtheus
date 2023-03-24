@@ -127,7 +127,7 @@ const modalProfile = document.querySelector("#modalEdit");
 const modalEditForm = document.querySelector("#modalEditForm");
 
 //Select Edit button
-const profileEditButton = document.querySelector(".profile__edit_btn");
+const profileEditButton = document.querySelector(".profile__edit");
 const modalEditCloseButton = document.querySelector("#modalEditCloseBtn");
 
 //Select profile title/description to be displayed
@@ -166,7 +166,7 @@ const linkInput = modalAddForm.querySelector(".modal__input_type_link");
 
 //Select add modal buttons
 const modalAddCloseBtn = document.querySelector("#modalAddCloseBtn");
-const profileAddButton = document.querySelector(".profile__add_btn");
+const profileAddButton = document.querySelector(".profile__add");
 
 //EventListener for add Modal
 profileAddButton.addEventListener("click", () => openModal(modalAdd));
