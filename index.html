@@ -24,11 +24,11 @@
             <div class="profile__info">
               <div class="profile__labels">
                 <h1 class="profile__title">Jacques Cousteau</h1>
-                <button type="button" aria-label="Edit button to change name or description" class="profile__edit"></button>
+                <button type="button" aria-label="Edit button to change name or description" class="profile__edit_btn"></button>
               </div>
               <p class="profile__description">Explorer</p>
             </div>
-            <button type="button" aria-label="Add button to allow more pictures to the collection" class="profile__add"></button>
+            <button type="button" aria-label="Add button to allow more pictures to the collection" class="profile__add_btn"></button>
           </div>
         </section>
         <section class="cards">
@@ -38,7 +38,8 @@
               <img class="card__image" src="" alt="" />
               <div class="card__description">
                 <h2 class="card__title"></h2>
-                <button type="button" class="card__button"></button>
+                <button type="button" class="card__button_like"></button>
+                <button type="button" class="card__button_delete"></button>
               </div>
             </li>
           </template>
@@ -48,18 +49,38 @@
         <p class="footer__copyright">© 2023 Around The U.S.</p>
       </footer>
     </div>
-    <div class="modal">
-        <div class="modal__container">
-          <form class="modal__form" name="profile_form">
-            <h2 class="modal__title">Edit Profile</h2>
-            <fieldset class="modal__fieldset">
-              <input class="modal__input modal__input_type_name" type="text" placeholder="Name" name="profile_name_input"/>
-              <input class="modal__input modal__input_type_description" type="text" placeholder="Description" name="profile_description_input"/>
-              <button type="submit" aria-label="Saves new input from user" class="modal__save">Save</button>
-            </fieldset>
-          </form>
-          <button type="button" class="modal__close" aria-label="This closes the pop-up form"></button>
-        </div>
+    <div class="modal modal_edit" id="modalEdit">
+      <div class="modal__container">
+        <form class="modal__form" id="modalEditForm" name="profile_Edit_form">
+          <h2 class="modal__title">Edit Profile</h2>
+          <fieldset class="modal__fieldset">
+            <input class="modal__input modal__input_type_name" type="text" placeholder="Name" name="profile_name_input" />
+            <input class="modal__input modal__input_type_description" type="text" placeholder="Description" name="profile_description_input" />
+            <button type="submit" aria-label="Saves new input from user" class="modal__save">Save</button>
+          </fieldset>
+        </form>
+        <button type="button" class="modal__close" id="modalEditCloseBtn" aria-label="This closes the pop-up form"></button>
+      </div>
+    </div>
+    <div class="modal modal_add" id="modalAdd">
+      <div class="modal__container">
+        <form class="modal__form" id="modalAddForm" name="Add_form">
+          <h2 class="modal__title">New place</h2>
+          <fieldset class="modal__fieldset">
+            <input class="modal__input modal__input_type_title" type="text" placeholder="Title" name="newCard_title_input" />
+            <input class="modal__input modal__input_type_link" type="text" placeholder="Image link" name="newCard_link_input" />
+            <button type="submit" aria-label="Saves new input from user" class="modal__create">Create</button>
+          </fieldset>
+        </form>
+        <button type="button" class="modal__close" id="modalAddCloseBtn" aria-label="This closes the pop-up form"></button>
+      </div>
+    </div>
+    <div class="modal modal_image" id="modalImage">
+      <div class="modal__container_image">
+        <img class="modal__image_enlarged" src="" alt="" />
+        <h2 class="modal__image_title"></h2>
+        <button type="button" class="modal__close" id="modalImageCloseBtn" aria-label="This closes the pop-up form"></button>
+      </div>
     </div>
     <script src="./scripts/index.js"></script>
   </body>

@@ -1,4 +1,4 @@
-# Project 4: Around The U.S.
+# Project 5: Around The U.S.
 
 ### Overview  
 
@@ -25,6 +25,8 @@ The way you'll do this at work is by exporting images directly from Figma — we
 Good luck and have fun!
 
 * [Link to project popup edit box](https://github.com/kd7yuen/se_project_aroundtheus/blob/main/images/project_demo/modal_popup.png)
+* [Link to project popup add card box](se_project_aroundtheus/images/project_demo/modal_add.png)
+* [Link to project image popup box](se_project_aroundtheus/images/project_demo/ezgif.com-video-to-gif.gif)
 
 **Github**
 
@@ -32,6 +34,7 @@ Good luck and have fun!
 
 **Future ideas**
 
-* Add more different cards
-* Put own images
+* Add more unique cards (Done)
+* Put own images (Done)
 * add more css of own style with more pseudo-classes
+* Rename for easier read

@@ -40,7 +40,7 @@
   max-width: 373px;
 }
 
-.profile__edit {
+.profile__edit_btn {
   width: 24px;
   height: 24px;
   border: 1px solid #ffffff;
@@ -52,7 +52,7 @@
   cursor: pointer;
 }
 
-.profile__edit:hover {
+.profile__edit_btn:hover {
   opacity: 60%;
 }
 
@@ -68,7 +68,7 @@
   max-width: 320px;
 }
 
-.profile__add {
+.profile__add_btn {
   border: 2px solid #ffffff;
   width: 150px;
   height: 50px;
@@ -81,12 +81,12 @@
   cursor: pointer;
 }
 
-.profile__add:hover {
+.profile__add_btn:hover {
   opacity: 60%;
 }
 
 @media screen and (max-width: 1024px) {
-  .profile__add {
+  .profile__add_btn {
     width: 110px;
   }
 
@@ -100,7 +100,7 @@
     max-width: 600px;
   }
 
-  .profile__add {
+  .profile__add_btn {
     width: 80px;
   }
 
@@ -142,11 +142,11 @@
     line-height: 17px;
     padding: 0;
   }
-  .profile__edit {
+  .profile__edit_btn {
     width: 18px;
     height: 18px;
   }
-  .profile__add {
+  .profile__add_btn {
     width: 88%;
     margin-top: 36px;
   }
