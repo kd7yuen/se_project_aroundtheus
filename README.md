@@ -13,6 +13,8 @@ This project is made so all the elements are displayed correctly on popular scre
 Created a webpage with cards that follow a grid pattern and can adjust to different screen types.
 
 This now includes the early works of interactive javascript. The edit button now displays a popup to edit the profile. Added a sticky footer that always stays at bottom even when more cards added.
+
+Now includes a smooth opening of modals and can add additional cards. Also, deleting cards is available as a function too. Lastly, a blown up image modal is shown when cursor is clicked on card image.
   
 **Figma**  
   
