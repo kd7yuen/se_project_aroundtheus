@@ -54,21 +54,21 @@
         <form class="modal__form" id="modalEditForm" name="profile_Edit_form">
           <h2 class="modal__title">Edit Profile</h2>
           <fieldset class="modal__fieldset">
-            <input class="modal__input modal__input_type_name" type="text" placeholder="Name" name="profile_name_input" />
-            <input class="modal__input modal__input_type_description" type="text" placeholder="Description" name="profile_description_input" />
+            <input class="modal__input modal__input_type_name" type="text" placeholder="Name" name="profile_name_input" required/>
+            <input class="modal__input modal__input_type_description" type="text" placeholder="Description" name="profile_description_input" required/>
             <button type="submit" aria-label="Saves new input from user" class="modal__save">Save</button>
           </fieldset>
         </form>
         <button type="button" class="modal__close" id="modalEditCloseBtn" aria-label="This closes the pop-up form"></button>
       </div>
     </div>
-    <div class="modal modal_add" id="modalAdd">
+    <div class="modal modal_add" id="cardAddModal">
       <div class="modal__container">
-        <form class="modal__form" id="modalAddForm" name="Add_form">
+        <form class="modal__form" id="cardAddForm" name="Add_form">
           <h2 class="modal__title">New place</h2>
           <fieldset class="modal__fieldset">
-            <input class="modal__input modal__input_type_title" type="text" placeholder="Title" name="newCard_title_input" />
-            <input class="modal__input modal__input_type_link" type="text" placeholder="Image link" name="newCard_link_input" />
+            <input class="modal__input modal__input_type_title" type="text" placeholder="Title" name="newCard_title_input" required/>
+            <input class="modal__input modal__input_type_link" type="url" placeholder="Image link" name="newCard_link_input" required/>
             <button type="submit" aria-label="Saves new input from user" class="modal__create">Create</button>
           </fieldset>
         </form>
@@ -82,6 +82,6 @@
         <button type="button" class="modal__close" id="modalImageCloseBtn" aria-label="This closes the pop-up form"></button>
       </div>
     </div>
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/index.js" defer></script>
   </body>
 </html>

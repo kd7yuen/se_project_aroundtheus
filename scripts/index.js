@@ -26,11 +26,92 @@ const initialCards = [
   },
 ];
 
+// Variables
+
 //Select <ul> for card template to be incorporated into
 const cardsList = document.querySelector(".cards__list");
 const cardTemplate = document
   .querySelector("#card")
   .content.querySelector(".card__block");
+
+//Select Image Popup
+const modalImage = document.querySelector("#modalImage");
+const modalImageCloseButton = modalImage.querySelector("#modalImageCloseBtn");
+const modalImageTitle = modalImage.querySelector(".modal__image-title");
+const modalImageLink = modalImage.querySelector(".modal__image-enlarged");
+
+//Select Edit popup
+const editProfileModal = document.querySelector("#modalEdit");
+const editProfileModalForm = document.querySelector("#modalEditForm");
+
+//Select Edit button and close button
+const profileEditButton = document.querySelector(".profile__edit");
+const profileEditCloseButton = document.querySelector("#modalEditCloseBtn");
+
+//Select profile title/description to be displayed
+const profileTitle = document.querySelector(".profile__title");
+const profileDescription = document.querySelector(".profile__description");
+
+//Modal profile user input
+const nameInput = editProfileModalForm.querySelector(".modal__input_type_name");
+const descriptionInput = editProfileModalForm.querySelector(
+  ".modal__input_type_description"
+);
+
+//Select an Add modal and add modal form
+const cardAddModal = document.querySelector("#cardAddModal");
+const cardAddForm = document.querySelector("#cardAddForm");
+
+//Select user input for card's image and title
+const titleInput = cardAddForm.querySelector(".modal__input_type_title");
+const linkInput = cardAddForm.querySelector(".modal__input_type_link");
+
+//Select add modal buttons
+const addCardModalCloseButton = document.querySelector("#modalAddCloseBtn");
+const addCardButton = document.querySelector(".profile__add");
+
+//-------------------------------
+//          Functions
+//-------------------------------
+
+//close modal
+function closeModal(modal) {
+  modal.classList.remove("modal_open");
+}
+
+//opens modal
+function openModal(modal) {
+  modal.classList.add("modal_open");
+}
+
+function fillProfileForm() {
+  nameInput.value = profileTitle.textContent;
+  descriptionInput.value = profileDescription.textContent;
+}
+
+function openEditProfileModal() {
+  fillProfileForm();
+  openModal(editProfileModal);
+}
+
+//Submits profile modal editted user input
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+  profileTitle.textContent = nameInput.value;
+  profileDescription.textContent = descriptionInput.value;
+  closeModal(editProfileModal);
+}
+
+//Submits New Card modal
+function handleAddFormSubmit(evt) {
+  evt.preventDefault();
+  const name = evt.target.newCard_title_input.value;
+  const link = evt.target.newCard_link_input.value;
+  const cardElements = getCardElement({ name, link });
+  renderCard(cardElements, cardsList);
+  cardAddForm.reset();
+  closeModal(cardAddModal);
+}
 
 function renderCard(cardEl, cardsListContainer) {
   cardsListContainer.prepend(cardEl);
@@ -44,134 +125,61 @@ function getCardElement(cardData) {
   cardImage.src = cardData.link;
   cardTitle.textContent = cardData.name;
   cardImage.alt = cardData.name;
- 
-  //------------------------------
-  //        Like Button
-  //------------------------------
+
   const cardLikeButton = cardElement.querySelector(".card__button_like");
   cardLikeButton.addEventListener("click", () => {
     cardLikeButton.classList.toggle("card__button_like_active");
   });
 
-  //-------------------------------
-  //        Delete Card Button
-  //-------------------------------
   const cardRemoveButton = cardElement.querySelector(".card__button_delete");
   cardRemoveButton.addEventListener("click", () => {
     cardElement.remove(cardElement);
   });
 
-  //-------------------------------
-  //        Image Modal
-  //-------------------------------
-  const modalImage = document.querySelector("#modalImage");
-  const modalImageCloseButton = modalImage.querySelector("#modalImageCloseBtn");
-  const modalImageTitle = modalImage.querySelector(".modal__image_title");
-  const modalImageLink = modalImage.querySelector(".modal__image_enlarged");
-
-  cardImage.addEventListener("click", () => {
-    openModal(modalImage);
+  function PopupImage() {
     modalImageLink.src = cardData.link;
     modalImageLink.alt = cardData.name;
     modalImageTitle.textContent = cardData.name;
+  }
+
+  function OpenPopupImage() {
+    PopupImage();
+    openModal(modalImage);
+  }
+
+  cardImage.addEventListener("click", () => {
+    OpenPopupImage();
   });
 
-  modalImageCloseButton.addEventListener("click", () => {
-    closeModal(modalImage);
-  });
   return cardElement;
 }
+
 initialCards.forEach(function (cardData) {
-  const cardRender = getCardElement(cardData);
-  renderCard(cardRender, cardsList);
+  const cardElements = getCardElement(cardData);
+  renderCard(cardElements, cardsList);
 });
-
-//-------------------------------
-//          Functions
-//-------------------------------
-
-//removes modal
-function closeModal(modal) {
-  modal.classList.remove("modal_open");
-  modal.classList.add("modal_close");
-}
-
-//opens modal
-function openModal(modal) {
-  modal.classList.add("modal_open");
-}
-
-//Submits profile modal editted user input
-function handleProfileFormSubmit(evt) {
-  evt.preventDefault();
-  profileTitle.textContent = nameInput.value;
-  profileDescription.textContent = descriptionInput.value;
-  closeModal(modalProfile);
-}
-
-//Submits New Card modal
-function handleAddFormSubmit(evt) {
-  evt.preventDefault();
-  const name = evt.target.newCard_title_input.value;
-  const link = evt.target.newCard_link_input.value;
-  const cardRender = getCardElement({ name, link });
-  renderCard(cardRender, cardsList);
-  closeModal(modalAdd);
-}
-//-------------------------------
-//         Profile Edit Modal
-//-------------------------------
-
-//Select modal and modal's form
-const modalProfile = document.querySelector("#modalEdit");
-const modalEditForm = document.querySelector("#modalEditForm");
-
-//Select Edit button
-const profileEditButton = document.querySelector(".profile__edit");
-const modalEditCloseButton = document.querySelector("#modalEditCloseBtn");
-
-//Select profile title/description to be displayed
-const profileTitle = document.querySelector(".profile__title");
-const profileDescription = document.querySelector(".profile__description");
-
-//Modal profile user input
-const nameInput = modalEditForm.querySelector(".modal__input_type_name");
-const descriptionInput = modalEditForm.querySelector(
-  ".modal__input_type_description"
-);
 
 //EventListener for when buttons are clicked
 profileEditButton.addEventListener("click", () => {
-  nameInput.value = profileTitle.textContent;
-  descriptionInput.value = profileDescription.textContent;
-
-  openModal(modalProfile);
+  openEditProfileModal();
 });
-modalEditCloseButton.addEventListener("click", () => closeModal(modalProfile));
 
-//Submits editted data from user
-modalEditForm.addEventListener("submit", handleProfileFormSubmit);
+addCardButton.addEventListener("click", () => openModal(cardAddModal));
 
-//-------------------------------
-//          Add Modal
-//-------------------------------
+profileEditCloseButton.addEventListener("click", () =>
+  closeModal(editProfileModal)
+);
 
-//Select an Add modal and add modal form
-const modalAdd = document.querySelector("#modalAdd");
-const modalAddForm = document.querySelector("#modalAddForm");
+addCardModalCloseButton.addEventListener("click", () =>
+  closeModal(cardAddModal)
+);
 
-//Select user input for card's image and title
-const titleInput = modalAddForm.querySelector(".modal__input_type_title");
-const linkInput = modalAddForm.querySelector(".modal__input_type_link");
+modalImageCloseButton.addEventListener("click", () => {
+  closeModal(modalImage);
+});
 
-//Select add modal buttons
-const modalAddCloseBtn = document.querySelector("#modalAddCloseBtn");
-const profileAddButton = document.querySelector(".profile__add");
+addCardButton.addEventListener("click", () => openModal(cardAddModal));
 
-//EventListener for add Modal
-profileAddButton.addEventListener("click", () => openModal(modalAdd));
+cardAddForm.addEventListener("submit", handleAddFormSubmit);
 
-modalAddCloseBtn.addEventListener("click", () => closeModal(modalAdd));
-
-//Submits new Card data from user
-modalAddForm.addEventListener("submit", handleAddFormSubmit);
+editProfileModalForm.addEventListener("submit", handleProfileFormSubmit);
