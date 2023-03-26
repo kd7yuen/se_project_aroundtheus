@@ -145,13 +145,13 @@ function getCardElement(cardData) {
     imageModalTitle.textContent = cardData.name;
   }
 
-  function OpenPreviewPopup() {
+  function openPreviewPopup() {
     fillPreviewPopup();
     openModal(imageModal);
   }
 
   cardImage.addEventListener("click", () => {
-    OpenPreviewPopup();
+    openPreviewPopup();
   });
 
   return cardElement;
