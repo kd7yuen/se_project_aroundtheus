@@ -1,4 +1,4 @@
-// data array
+// Rendered card data array
 const initialCards = [
   {
     name: "Amsterdam",
@@ -26,7 +26,7 @@ const initialCards = [
   },
 ];
 
-// Variables
+// Elements selected from HTML
 
 //Select <ul> for card template to be incorporated into
 const cardsList = document.querySelector(".cards__list");
@@ -84,11 +84,13 @@ function openModal(modal) {
   modal.classList.add("modal_open");
 }
 
+//Fill out profile form
 function fillProfileForm() {
   nameInput.value = profileTitle.textContent;
   descriptionInput.value = profileDescription.textContent;
 }
 
+//Opens filled out profile modal
 function openEditProfileModal() {
   fillProfileForm();
   openModal(editProfileModal);
@@ -113,11 +115,12 @@ function handleAddFormSubmit(evt) {
   closeModal(cardAddModal);
 }
 
+//New cards is added first
 function renderCard(cardEl, cardsListContainer) {
   cardsListContainer.prepend(cardEl);
 }
 
-// card data
+// Gets card data
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImage = cardElement.querySelector(".card__image");
