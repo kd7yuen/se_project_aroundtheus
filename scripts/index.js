@@ -136,19 +136,19 @@ function getCardElement(cardData) {
     cardElement.remove(cardElement);
   });
 
-  function PopupImage() {
+  function fillPreviewPopup() {
     modalImageLink.src = cardData.link;
     modalImageLink.alt = cardData.name;
     modalImageTitle.textContent = cardData.name;
   }
 
-  function OpenPopupImage() {
-    PopupImage();
+  function OpenPreviewPopup() {
+    fillPreviewPopup();
     openModal(modalImage);
   }
 
   cardImage.addEventListener("click", () => {
-    OpenPopupImage();
+    OpenPreviewPopup();
   });
 
   return cardElement;
